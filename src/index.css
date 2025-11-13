@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #584a67e1;
+  --color-card: rgba(233, 228, 244, 0.898);
+  --color-text: black;
+  --color-accent: #b895c6;
+  --color-accent-hover: #9a65af;
+  --color-muted: lightgray;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--color-muted);
+  color: var(--color-text);
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+header nav {
+  margin-top: 0.5rem;
+}
+
+header nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: var(--color-bg);
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  flex: 1;
+}
+
+article {
+  background-color: var(--color-card);
+  color: var(--color-text);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: var(--color-text);
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-text);
+  resize: vertical;
+}
+
+button {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--color-muted);
+  color: var(--color-text);
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
