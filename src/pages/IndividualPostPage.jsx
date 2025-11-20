@@ -42,11 +42,7 @@ const IndividualPostPage = () => {
   const handleNewComments = ({ name, comment }) => {
     if (!name?.trim() || !comment?.trim()) return;
 
-<<<<<<< HEAD
-    fetch(`https://jsonplaceholder.typicode.com/posts/{postid}/comments`, {
-=======
     fetch(`https://jsonplaceholder.typicode.com/posts/{postId}/comments`, {
->>>>>>> e248458 (feat: added landing page)
       method: "POST",
       headers: { "Content-Type": "application/json; charset=UTF-8" },
       body: JSON.stringify({
@@ -87,23 +83,6 @@ const IndividualPostPage = () => {
           {user?.email ? ` (${user.email})` : ""}
         </small>
       </article>
-<<<<<<< HEAD
-      <CommentForm onSubmit={handleNewComments} />
-      {comments.length > 0 ? (
-        <div className="w-full">
-          {comments.map((c) => {
-            return (
-              <div key={c.id} className="bg-[#DCD6E7] p-4 rounded-md m-4">
-                {" "}
-                <h1>{c.name}</h1>
-                <p>{c.comment}</p>
-              </div>
-            );
-          })}
-        </div>
-      ) : (
-        <p>No comments yet. Be the first to comment!</p>
-=======
 
       {username ? (
         <>
@@ -132,7 +111,6 @@ const IndividualPostPage = () => {
             </Link>
           </p>
         </div>
->>>>>>> e248458 (feat: added landing page)
       )}
     </div>
   );

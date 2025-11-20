@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-function Header() {
-  return (
-    <header className="place-self-end">
-      <h1>Niner TV Blog</h1>
-      <nav>
-        <a href="/">Home</a>
-
-        <a href="/contacts">Contact</a>
-=======
 import { useAuth, useUsername } from "../login/authWrapper/AuthContext";
 import { Link, Route } from "react-router-dom";
 
@@ -31,7 +21,6 @@ function Header() {
         ) : (
           <Link to="/login">Login</Link>
         )}
->>>>>>> e248458 (feat: added landing page)
       </nav>
     </header>
   );
