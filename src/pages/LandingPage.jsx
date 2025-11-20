@@ -5,7 +5,7 @@ const LandingPage = () => {
   const username = useUsername();
   return (
     <div className="w-[100vh] h-[70vh] flex flex-col place-items-center justify-center">
-      <h1>Welcome to Niner TV Blog</h1>
+      <h1>Welcome, {username ? username : null} to Niner TV Blog</h1>
       <p className="text-xl ">
         This web app allows users to browse and read posts while providing the
         option to log in and leave comments. It offers a clean and intuitive

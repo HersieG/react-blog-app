@@ -103,13 +103,13 @@ const IndividualPostPage = () => {
           )}
         </>
       ) : (
-        <div className="mt-4 text-sm text-black text-center">
-          <p>
-            You must be logged in to view comments and leave a comment. Login{" "}
-            <Link to="/login" className="text-blue underline">
-              Here.
-            </Link>
+        <div className="mt-4 text-sm text-black text-center flex flex-col justify-center">
+          <p className="text-xl">
+            You must be logged in to view comments and leave a comment.{" "}
           </p>
+          <Link to="/login" className="text-blue underline">
+            <button>Login here.</button>
+          </Link>
         </div>
       )}
     </div>
