@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --color-bg: #584a67e1;
+  --color-bg: oklch(43.476% 0.04994 306.384 / 0.882);
+  --color-bg-darker: oklch(35% 0.04994 306.384 / 0.882);
   --color-card: rgba(233, 228, 244, 0.898);
   --color-text: black;
   --color-accent: #b895c6;

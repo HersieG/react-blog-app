@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import CommentForm from "../components/CommentForm";
 import { useParams, Link } from "react-router-dom";
+import { useUsername } from "../login/authWrapper/AuthContext";
 
 const IndividualPostPage = () => {
   const { id } = useParams();
+  const username = useUsername();
+
   const [post, setPost] = useState(null);
   const [user, setUser] = useState(null);
   const [comments, setComments] = useState([]);
@@ -39,7 +42,11 @@ const IndividualPostPage = () => {
   const handleNewComments = ({ name, comment }) => {
     if (!name?.trim() || !comment?.trim()) return;
 
+<<<<<<< HEAD
     fetch(`https://jsonplaceholder.typicode.com/posts/{postid}/comments`, {
+=======
+    fetch(`https://jsonplaceholder.typicode.com/posts/{postId}/comments`, {
+>>>>>>> e248458 (feat: added landing page)
       method: "POST",
       headers: { "Content-Type": "application/json; charset=UTF-8" },
       body: JSON.stringify({
@@ -80,6 +87,7 @@ const IndividualPostPage = () => {
           {user?.email ? ` (${user.email})` : ""}
         </small>
       </article>
+<<<<<<< HEAD
       <CommentForm onSubmit={handleNewComments} />
       {comments.length > 0 ? (
         <div className="w-full">
@@ -95,6 +103,36 @@ const IndividualPostPage = () => {
         </div>
       ) : (
         <p>No comments yet. Be the first to comment!</p>
+=======
+
+      {username ? (
+        <>
+          <CommentForm onSubmit={handleNewComments} />
+
+          {comments.length > 0 ? (
+            <div className="w-full">
+              {comments.map((c) => (
+                <div key={c.id} className="bg-[#DCD6E7] p-4 rounded-md m-4">
+                  {" "}
+                  <h1>{c.name}</h1>
+                  <p>{c.comment}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>No comments yet. Be the first to comment!</p>
+          )}
+        </>
+      ) : (
+        <div className="mt-4 text-sm text-black text-center">
+          <p>
+            You must be logged in to view comments and leave a comment. Login{" "}
+            <Link to="/login" className="text-blue underline">
+              Here.
+            </Link>
+          </p>
+        </div>
+>>>>>>> e248458 (feat: added landing page)
       )}
     </div>
   );

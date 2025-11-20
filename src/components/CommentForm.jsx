@@ -1,8 +1,15 @@
 import React from "react";
 import { useState } from "react";
+<<<<<<< HEAD
 
 const CommentForm = ({ onSubmit }) => {
   const [name, setName] = useState("");
+=======
+import { useUsername } from "../login/authWrapper/AuthContext";
+const CommentForm = ({ onSubmit }) => {
+  const username = useUsername();
+  const [name, setName] = useState(username);
+>>>>>>> e248458 (feat: added landing page)
   const [comment, setComment] = useState("");
 
   const handleSubmit = (e) => {
@@ -18,10 +25,15 @@ const CommentForm = ({ onSubmit }) => {
     }
   };
   return (
+<<<<<<< HEAD
     <form
       className="flex flex-col gap-4 justify-center place-items-center"
       >
       <label htmlFor="name" className="text-xl underline">
+=======
+    <form className="flex flex-col gap-4 justify-center place-items-center">
+      {/* <label htmlFor="name" className="text-xl underline">
+>>>>>>> e248458 (feat: added landing page)
         {" "}
         Name{" "}
       </label>
@@ -32,7 +44,11 @@ const CommentForm = ({ onSubmit }) => {
         onChange={(e) => setName(e.target.value)}
         placeholder="Enter your name"
         className="p-2 rounded-md text-center"
+<<<<<<< HEAD
       ></input>
+=======
+      ></input> */}
+>>>>>>> e248458 (feat: added landing page)
 
       <label htmlFor="comment" className="text-xl underline">
         {" "}
