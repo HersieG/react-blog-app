@@ -10,7 +10,7 @@ function Header() {
         <h1>Niner TV Blog</h1>
       </Link>
       <nav>
-        <Link to="/blogs">Home</Link>
+        <Link to="/blogs">Blogs</Link>
         <Link to="/contacts">Contact</Link>
         {username ? (
           <p className="text-2xl">
